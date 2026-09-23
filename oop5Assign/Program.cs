@@ -47,6 +47,27 @@
             #endregion
 
             #endregion
+
+
+            #region Part01 Q3 Static Members
+
+            #region a)What is a static field, and how is it different from an instance field?
+            // it is a field that owned by the class itself not to any instance and it has only one copy that is shared by all the members
+            #endregion
+
+            #region b) What is a static method? Can a static method directly access instance members?
+            // it is a method belongs to the class and can be only called by the class name , no because it does not has an object associated with it 
+            #endregion
+
+            #region c) What is a static constructor, and when is it executed?
+            // A special constructor which initializes the configuration of a class and is called one time before the first use of the class
+            #endregion
+
+            #region d) What is a static class? Can you create an object from a static class?
+            // a class that only contains a static members , No you can not . 
+            #endregion
+
+            #endregion
         }
     }
 }
