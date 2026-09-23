@@ -12,9 +12,9 @@ namespace oop5Assign
             Console.WriteLine("==========================");
         }
 
-        public static void PrintSystemTitle()
+        public static void PrintSystemTitle(string s)
         {
-            Console.WriteLine("Smart Delivery Management System");
+            Console.WriteLine(s);
         }
     } 
     #endregion

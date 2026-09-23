@@ -27,7 +27,7 @@ namespace oop5Assign
 
         public string GetTrackingStatus()
         {
-            return $"Shipment {TrackingCode} is out for Delivery ";
+            return $"Delivered";
         }
 
         public override void PrintShipment()

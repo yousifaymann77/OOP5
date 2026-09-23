@@ -4,7 +4,7 @@ using System.Text;
 
 namespace oop5Assign
 {
-    internal abstract class Shipment
+    internal abstract class Shipment 
     {
         private string trackingCode;
         private string description;
@@ -173,7 +173,8 @@ namespace oop5Assign
         public static int GetTotalShipmensCreated()
         {
             return TotalShipmentsCreated;
-        } 
+        }
+
         #endregion
 
     }

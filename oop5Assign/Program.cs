@@ -114,7 +114,7 @@ namespace oop5Assign
 
 
             DeliveryUtilities.PrintSeparator();
-            DeliveryUtilities.PrintSystemTitle();
+            DeliveryUtilities.PrintSystemTitle("Smart Delivery Management System");
             DeliveryUtilities.PrintSeparator();
             Console.WriteLine("Shipment System Initialized\n");
             DeliveryUtilities.PrintSeparator();
@@ -182,9 +182,27 @@ namespace oop5Assign
 
             express3.Address.City = "Giza";
             Console.WriteLine($"Original Shipment Address : {express2.Address.City}");
-            Console.WriteLine($"Copied Shipment Address : {express3.Address.City}\n"); 
+            Console.WriteLine($"Copied Shipment Address : {express3.Address.City}\n");
             #endregion
 
+
+
+            #region Part02 Q8 Extension Methods
+            DeliveryUtilities.PrintSeparator();
+            DeliveryUtilities.PrintSystemTitle("Extension Methods");
+            DeliveryUtilities.PrintSeparator();
+            Console.WriteLine("\n");
+
+            Console.WriteLine(standard.GetSummary());
+            Console.WriteLine(express.GetSummary());
+            Console.WriteLine(international.GetSummary());
+            Console.WriteLine("\n");
+
+            Console.WriteLine($"{standard.TrackingCode} Is Deliverd : {standard.IsDelivered()}");
+            Console.WriteLine($"{express.TrackingCode} Is Deliverd : {express.IsDelivered()}");
+            Console.WriteLine("\n");
+
+            #endregion
 
         }
     }
