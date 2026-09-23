@@ -72,5 +72,9 @@ namespace oop5Assign
 
         }
 
+        public override Shipment CopyShipment()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

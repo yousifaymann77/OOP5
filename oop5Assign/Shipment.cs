@@ -136,6 +136,12 @@ namespace oop5Assign
          public abstract Shipment CopyShipment();
         #endregion
 
-        
+        #region Part02 Q2 Shallow Copy
+        public Shipment ShallowCopy()
+        {
+            return (Shipment)this.MemberwiseClone();
+        }
+        #endregion
+
     }
 }

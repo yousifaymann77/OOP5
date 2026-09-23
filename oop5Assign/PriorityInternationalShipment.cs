@@ -11,7 +11,6 @@ namespace oop5Assign
         {
         }
 
-        #region part02 Q9 
         public sealed override void GenerateCustomReport()
         {
             base.GenerateCustomReport();

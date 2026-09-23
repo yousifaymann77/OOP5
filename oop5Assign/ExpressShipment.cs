@@ -55,7 +55,10 @@ namespace oop5Assign
         {
             return EstimatedCost * 0.08m;
         }
-        
 
+        public override Shipment CopyShipment()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

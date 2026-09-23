@@ -141,10 +141,29 @@ namespace oop5Assign
 
             StandardShipment standard2 = standard;
             Console.WriteLine($"Original Shipment : {standard.TrackingCode}");
-            Console.WriteLine($"Assigned Shipment : {standard2.TrackingCode} ");
-
+            Console.WriteLine($"Assigned Shipment : {standard2.TrackingCode} \n");
 
             #endregion
+
+
+            #region Part02 Q2 Shallow copy
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("Shallow Copy ");
+            Console.WriteLine("--------------------------\n");
+
+            express.Address = new DeliveryAddress("cairo", "Paris street", 2);
+
+            ExpressShipment express2 = (ExpressShipment)express.ShallowCopy();
+
+            Console.WriteLine($"Original Shipment Address : {express.Address.City}");
+            Console.WriteLine($"Copied Shipment Address : {express2.Address.City}\n");
+            Console.WriteLine("Changing copied shipment address...\n");
+
+            express2.Address.City = "Giza";
+            Console.WriteLine($"Original Shipment Address : {express.Address.City}");
+            Console.WriteLine($"Copied Shipment Address : {express2.Address.City}\n");
+            #endregion
+
 
         }
     }
