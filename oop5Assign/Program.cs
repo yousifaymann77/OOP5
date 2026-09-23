@@ -1,4 +1,6 @@
-﻿namespace oop5Assign
+﻿using System.Runtime.CompilerServices;
+
+namespace oop5Assign
 {
     internal class Program
     {
@@ -65,6 +67,28 @@
 
             #region d) What is a static class? Can you create an object from a static class?
             // a class that only contains a static members , No you can not . 
+            #endregion
+
+            #endregion
+
+
+
+            #region part01 Q4 Extension Methods 
+
+            #region a)  What is an Extension Method?
+            // Method let you add a new method to an existing type without modifying the original one or creating a new derived type
+            #endregion
+
+            #region b) What keyword must be used in the first parameter of an extension method?
+            // this keyword
+            #endregion
+
+            #region c) Where must an extension method be declared? 
+            // inside a static class 
+            #endregion
+
+            #region d) Can an extension method access private members of the class it extends?
+            // No it cannot 
             #endregion
 
             #endregion
