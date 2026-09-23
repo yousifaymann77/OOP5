@@ -21,6 +21,32 @@
 
             #endregion
 
+
+
+            #region part01 Q2 Shallow copy vs Deep copy 
+
+            #region a)What is a Shallow Copy?
+            // creating a new object and copying the value type fields but for refrence type it copy only the refrences 
+            #endregion
+
+            #region b)What is a Deep Copy?
+            // craeting a new object and recursively copies all nested objects , The original and the copy objects are completely independent
+            #endregion
+
+            #region c)What happens to reference-type members when a Shallow Copy is created?
+            // The refrences only is copied and the objects in the heap remain the same so the two objects refers to the same objects 
+            #endregion
+
+            #region d)What happens to reference-type members when a Deep Copy is created?
+            // a new copy of the refrenced objects is created so changing in one does not affect the other one 
+            #endregion
+
+            #region e)Give one situation where Deep Copy would be safer than Shallow Copy.
+            // you have a bank account object that contains a reference to a customer object ,With a Shallow Copy, account1 and account2 would share the same customer object
+            //So if you change anything in account2 the customer in account1 would also change
+            #endregion
+
+            #endregion
         }
     }
 }
