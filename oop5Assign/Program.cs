@@ -153,15 +153,33 @@ namespace oop5Assign
 
             express.Address = new DeliveryAddress("cairo", "Paris street", 2);
 
-            ExpressShipment express2 = (ExpressShipment)express.ShallowCopy();
+            ExpressShipment express1 = (ExpressShipment)express.ShallowCopy();
 
             Console.WriteLine($"Original Shipment Address : {express.Address.City}");
-            Console.WriteLine($"Copied Shipment Address : {express2.Address.City}\n");
+            Console.WriteLine($"Copied Shipment Address : {express1.Address.City}\n");
             Console.WriteLine("Changing copied shipment address...\n");
 
-            express2.Address.City = "Giza";
+            express1.Address.City = "Giza";
             Console.WriteLine($"Original Shipment Address : {express.Address.City}");
-            Console.WriteLine($"Copied Shipment Address : {express2.Address.City}\n");
+            Console.WriteLine($"Copied Shipment Address : {express1.Address.City}\n");
+            #endregion
+
+            #region Part02 Q3 Deep Copy
+            ExpressShipment express2 = new ExpressShipment("SH0001H", "Shoes", 1000, 5, 500);
+            express2.Address = new DeliveryAddress("cairo", "Gamal", 3);
+
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("Deep Copy ");
+            Console.WriteLine("--------------------------\n");
+
+            ExpressShipment express3 = (ExpressShipment)express2.DeepCopy();
+            Console.WriteLine($"Original Shipment Address : {express2.Address.City}");
+            Console.WriteLine($"Copied Shipment Address : {express3.Address.City}\n");
+            Console.WriteLine("Changing copied shipment address...\n");
+
+            express3.Address.City = "Giza";
+            Console.WriteLine($"Original Shipment Address : {express2.Address.City}");
+            Console.WriteLine($"Copied Shipment Address : {express3.Address.City}\n"); 
             #endregion
 
 

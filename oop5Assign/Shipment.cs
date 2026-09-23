@@ -143,5 +143,14 @@ namespace oop5Assign
         }
         #endregion
 
+        #region Part02 Q3 Deep Copy 
+        public Shipment DeepCopy()
+        {
+            Shipment copy = (Shipment)this.MemberwiseClone();
+            copy.Address = new DeliveryAddress(this.Address.City, this.Address.Street, this.Address.BuildingNumber);
+            return copy;
+        } 
+        #endregion
+
     }
 }
