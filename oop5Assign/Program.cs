@@ -205,6 +205,12 @@ namespace oop5Assign
             #endregion
 
 
+            #region Part02 Demonestrating Partail Method
+            DeliveryUtilities.PrintSeparator();
+            DeliveryUtilities.PrintSystemTitle("Partial Method ");
+            DeliveryUtilities.PrintSeparator();
+            express.UpdateTrackingStatus("Out For Delivery");
+            #endregion
 
         }
     }
