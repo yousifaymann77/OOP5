@@ -113,13 +113,13 @@ namespace oop5Assign
             #endregion
 
 
-            Console.WriteLine("==========================");
-            Console.WriteLine("Smart Delivery Management System");
-            Console.WriteLine("==========================\n");
+            DeliveryUtilities.PrintSeparator();
+            DeliveryUtilities.PrintSystemTitle();
+            DeliveryUtilities.PrintSeparator();
             Console.WriteLine("Shipment System Initialized\n");
-            Console.WriteLine("==========================");
+            DeliveryUtilities.PrintSeparator();
             Console.WriteLine("Creating Shipments .....");
-            Console.WriteLine("==========================\n");
+            DeliveryUtilities.PrintSeparator();
 
             StandardShipment standard = new StandardShipment("SH00H", "LapTop", 100, 12);
             Console.WriteLine("Standard Shipment is created");
@@ -138,9 +138,9 @@ namespace oop5Assign
 
             #endregion
             #region part02 Q1 Object Copying
-            Console.WriteLine("=========================");
+            DeliveryUtilities.PrintSeparator();
             Console.WriteLine("Object Copying ");
-            Console.WriteLine("=========================\n");
+            DeliveryUtilities.PrintSeparator();
 
             StandardShipment standard2 = standard;
             Console.WriteLine($"Original Shipment : {standard.TrackingCode}");
@@ -150,9 +150,9 @@ namespace oop5Assign
 
 
             #region Part02 Q2 Shallow copy
-            Console.WriteLine("--------------------------");
+            DeliveryUtilities.PrintSeparator();
             Console.WriteLine("Shallow Copy ");
-            Console.WriteLine("--------------------------\n");
+            DeliveryUtilities.PrintSeparator();
 
             express.Address = new DeliveryAddress("cairo", "Paris street", 2);
 
@@ -171,9 +171,9 @@ namespace oop5Assign
             ExpressShipment express2 = new ExpressShipment("SH0001H", "Shoes", 1000, 5, 500);
             express2.Address = new DeliveryAddress("cairo", "Gamal", 3);
 
-            Console.WriteLine("--------------------------");
+            DeliveryUtilities.PrintSeparator();
             Console.WriteLine("Deep Copy ");
-            Console.WriteLine("--------------------------\n");
+            DeliveryUtilities.PrintSeparator();
 
             ExpressShipment express3 = (ExpressShipment)express2.DeepCopy();
             Console.WriteLine($"Original Shipment Address : {express2.Address.City}");
