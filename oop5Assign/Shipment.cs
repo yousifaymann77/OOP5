@@ -4,7 +4,7 @@ using System.Text;
 
 namespace oop5Assign
 {
-    internal abstract class Shipment 
+    internal abstract partial class Shipment 
     {
         private string trackingCode;
         private string description;
@@ -47,65 +47,7 @@ namespace oop5Assign
 
 
         }
-        public string TrackingCode
-        {
-            get
-            {
-                return trackingCode;
-            }
-            private set
-            {
-                if (!string.IsNullOrEmpty(value))
-                {
-                    trackingCode = value;
-                }
-            }
-
-        }
-        public string Description
-        {
-            get
-            {
-                return description;
-            }
-            set
-            {
-                if (!string.IsNullOrEmpty(value))
-                {
-                    description = value;
-                }
-            }
-        }
-
-        public decimal Weight
-        {
-            get
-            {
-                return weight;
-
-            }
-            set
-            {
-                if (value > 0)
-                {
-                    weight = value;
-                }
-            }
-        }
-        public decimal DeliveryFee
-        {
-            get
-            {
-                return deliveryFee;
-            }
-            private set
-            {
-                if (value > 0)
-                {
-                    deliveryFee = value;
-                }
-            }
-        }
+        
         public void UpdateDeliveryFee(decimal newFee)
         {
             if (newFee > 0)
@@ -150,7 +92,7 @@ namespace oop5Assign
         }
 
         #region Part02 Q1 Object Copying
-         public abstract Shipment CopyShipment();
+        public abstract Shipment CopyShipment();
         #endregion
 
         #region Part02 Q2 Shallow Copy
@@ -169,13 +111,7 @@ namespace oop5Assign
         }
         #endregion
 
-        #region part02 Q6 Static Method
-        public static int GetTotalShipmensCreated()
-        {
-            return TotalShipmentsCreated;
-        }
-
-        #endregion
+       
 
     }
 }
