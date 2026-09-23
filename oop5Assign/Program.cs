@@ -24,7 +24,6 @@ namespace oop5Assign
             #endregion
 
 
-
             #region part01 Q2 Shallow copy vs Deep copy 
 
             #region a)What is a Shallow Copy?
@@ -70,7 +69,6 @@ namespace oop5Assign
             #endregion
 
             #endregion
-
 
 
             #region part01 Q4 Extension Methods 
