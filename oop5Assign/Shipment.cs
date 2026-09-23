@@ -15,10 +15,17 @@ namespace oop5Assign
         public DeliveryAddress Address { get; set; }
 
         #region Part02 Q4 Static Field
-        public static int TotalShipmentsCreated ; 
+        public static int TotalShipmentsCreated ;
         #endregion
 
-        
+        #region Part02 Q5 Static constructor
+        static Shipment()
+        {
+            TotalShipmentsCreated = 0;
+            Console.WriteLine("Shipment System Initialized ");
+        } 
+        #endregion
+
 
         public Shipment(string trackingCode)
         {
