@@ -38,5 +38,17 @@ namespace oop5Assign
                               $" Description: {Description},\n" +
                               $" Estimated Cost: ${EstimatedCost} EGP");
         }
+
+        #region Part02 Q1 Object Copying
+        public override Shipment CopyShipment()
+        {
+            return new StandardShipment(
+                this.TrackingCode,
+                this.Description,
+                this.Weight,
+                this.DeliveryFee
+            );
+        } 
+        #endregion
     }
 }

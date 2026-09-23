@@ -12,10 +12,7 @@ namespace oop5Assign
         private decimal deliveryFee;
         public decimal ExtraPackingWeight { get; set; }
 
-        #region part02 Q5 
         public DeliveryAddress Address { get; set; }
-        #endregion
-
 
         public Shipment(string trackingCode)
         {
@@ -107,10 +104,10 @@ namespace oop5Assign
         //        return deliveryFee + (weight * 5);
         //    }
         //}
-        
+
         public abstract decimal EstimatedCost { get; }
         public abstract void PrintShipment();
-        
+
 
         //public virtual string PrintShipment()
         //{
@@ -134,5 +131,9 @@ namespace oop5Assign
             if (extraWeight >= 0)
                 this.weight = weight + extraWeight;
         }
+
+        #region Part02 Q1 Object Copying
+         public abstract Shipment CopyShipment();
+        #endregion   
     }
 }
