@@ -92,6 +92,27 @@ namespace oop5Assign
             #endregion
 
             #endregion
+
+
+            #region Part01 Q5 Partial Classes and Partial Methods
+
+            #region a) What is a Partial Class?
+            // allows you to split the implementation of a class into multiple files  
+            #endregion
+
+            #region b) Why would a developer split one class into multiple files?
+            // To organize large classes across multiple files , separate Auto-generated code from custom code , improve maintainability and readability
+            #endregion
+
+            #region c)What is a Partial Method?
+            // it is a method Declaration without implementation in the class 
+            #endregion
+
+            #region d) What happens if a declared partial method has no implementation?
+            // It is Ignored By the CLR 
+            #endregion
+
+            #endregion
         }
     }
 }
