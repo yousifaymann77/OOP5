@@ -111,6 +111,41 @@ namespace oop5Assign
             #endregion
 
             #endregion
+
+
+            Console.WriteLine("==========================");
+            Console.WriteLine("Smart Delivery Management System");
+            Console.WriteLine("==========================\n");
+            Console.WriteLine("Shipment System Initialized\n");
+            Console.WriteLine("==========================");
+            Console.WriteLine("Creating Shipments .....");
+            Console.WriteLine("==========================\n");
+
+            StandardShipment standard = new StandardShipment("SH00H", "LapTop", 100, 12);
+            Console.WriteLine("Standard Shipment is created");
+            ExpressShipment express = new ExpressShipment("SH01H", "Shoes", 1000, 5, 500);
+            Console.WriteLine("Express Shipment Is Created");
+            InternationalShipment international = new InternationalShipment("SH11H", "Table", 1500, 17, "Belgium", 900);
+            Console.WriteLine("International Shipment is created\n");
+
+            DeliveryCenter center = new DeliveryCenter();
+            center.AddShipment(standard);
+            center.AddShipment(express);
+            center.AddShipment(international);
+            Console.WriteLine($"Total Shipments Created :{DeliveryCenter.count } \n");
+
+            #region part02 Q1 Object Copying
+            Console.WriteLine("=========================");
+            Console.WriteLine("Object Copying ");
+            Console.WriteLine("=========================\n");
+
+            StandardShipment standard2 = standard;
+            Console.WriteLine($"Original Shipment : {standard.TrackingCode}");
+            Console.WriteLine($"Assigned Shipment : {standard2.TrackingCode} ");
+
+
+            #endregion
+
         }
     }
 }

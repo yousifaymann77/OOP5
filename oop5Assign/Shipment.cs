@@ -134,6 +134,8 @@ namespace oop5Assign
 
         #region Part02 Q1 Object Copying
          public abstract Shipment CopyShipment();
-        #endregion   
+        #endregion
+
+        
     }
 }

@@ -13,6 +13,7 @@ namespace oop5Assign
         #region part02 Q5 
         public Driver Driver { get; set; }
         #endregion
+        public static int count;
 
         public DeliveryCenter()
         {
@@ -57,6 +58,7 @@ namespace oop5Assign
                 if (shipments[i] == null)
                 {
                     shipments[i] = shipment;
+                    count++;
                     return true;
                 }
             }
