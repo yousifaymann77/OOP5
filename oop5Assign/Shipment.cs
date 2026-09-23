@@ -14,12 +14,19 @@ namespace oop5Assign
 
         public DeliveryAddress Address { get; set; }
 
+        #region Part02 Q4 Static Field
+        public static int TotalShipmentsCreated ; 
+        #endregion
+
+        
+
         public Shipment(string trackingCode)
         {
             this.TrackingCode = trackingCode;
             this.description = "Unknown";
             this.weight = 1;
             this.deliveryFee = 50;
+            TotalShipmentsCreated++;
 
         }
 
@@ -29,6 +36,9 @@ namespace oop5Assign
             this.Description = description;
             this.Weight = weight;
             this.DeliveryFee = deliveryFee;
+            TotalShipmentsCreated++;
+
+
         }
         public string TrackingCode
         {
