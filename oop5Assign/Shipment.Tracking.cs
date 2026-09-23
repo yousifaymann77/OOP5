@@ -83,8 +83,13 @@ namespace oop5Assign
         public string UpdateTrackingStatus(string status)
         {
             TrackingStatus = status;
+            OnTrackingStatusChanged(status);
             return TrackingStatus;
         }
+
+        #region part02 Q10 Partial Method
+        partial void OnTrackingStatusChanged(string status); 
+        #endregion
 
     }
 }

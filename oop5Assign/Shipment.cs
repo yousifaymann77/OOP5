@@ -111,7 +111,12 @@ namespace oop5Assign
         }
         #endregion
 
-       
+        #region Part02 Q10 Partial Method
+        partial void OnTrackingStatusChanged(string status)
+        {
+            Console.WriteLine($"Tracking status changed to: {status}");
+        } 
+        #endregion
 
     }
 }
