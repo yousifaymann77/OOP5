@@ -166,6 +166,13 @@ namespace oop5Assign
             Shipment copy = (Shipment)this.MemberwiseClone();
             copy.Address = new DeliveryAddress(this.Address.City, this.Address.Street, this.Address.BuildingNumber);
             return copy;
+        }
+        #endregion
+
+        #region part02 Q6 Static Method
+        public static int GetTotalShipmensCreated()
+        {
+            return TotalShipmentsCreated;
         } 
         #endregion
 

@@ -132,8 +132,11 @@ namespace oop5Assign
             center.AddShipment(standard);
             center.AddShipment(express);
             center.AddShipment(international);
-            Console.WriteLine($"Total Shipments Created :{DeliveryCenter.count } \n");
 
+            #region part02 Q5 Static Method calling
+            Console.WriteLine($"Total Shipments Created :{Shipment.TotalShipmentsCreated} \n");
+
+            #endregion
             #region part02 Q1 Object Copying
             Console.WriteLine("=========================");
             Console.WriteLine("Object Copying ");
